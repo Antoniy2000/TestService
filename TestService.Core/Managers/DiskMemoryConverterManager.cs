@@ -132,7 +132,7 @@ public class DiskMemoryConverterManager : IConverterManager
     private string GetFileDataPath(Guid id) => Path.Combine(GetFileDirectoryPath(id), FileDataName);
     private string GetFileInfoPath(Guid id) => Path.Combine(GetFileDirectoryPath(id), FileInfoName);
 
-    private async void StartAsync(FileConvertInfo info)
+    private async Task StartAsync(FileConvertInfo info)
     {
         var filePath = GetFileDataPath(info.Id);
         var outPath = GetFileConvertedDataPath(info.Id);
